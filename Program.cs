@@ -95,6 +95,9 @@
 
                 string zufallsGruss = spruch[rnd.Next(spruch.Length)];
 
+                Random color = new Random();
+                ConsoleColor randomColor = (ConsoleColor)color.Next(1, 16);
+                Console.ForegroundColor = randomColor;
                 Console.WriteLine($"\n      {zufallsGruss}\n");
                 Thread.Sleep(3000);
 
@@ -163,6 +166,9 @@
                 Console.SetCursorPosition(20, 9); Console.Write("+");
                 Console.BackgroundColor = ConsoleColor.Black;
                 string zufallsGruss2 = spruch[rnd.Next(spruch.Length)];
+                Random color2 = new Random();
+                ConsoleColor randomColor2 = (ConsoleColor)color2.Next(1, 16);
+                Console.ForegroundColor = randomColor2;
                 Console.SetCursorPosition(21, 16); Console.WriteLine($"\n      {zufallsGruss2}       \n");
                 Console.SetCursorPosition(0, 19);
                 Thread.Sleep(3000);               
