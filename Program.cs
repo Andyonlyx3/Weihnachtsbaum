@@ -34,6 +34,7 @@
             //Lass den Baum Blinken und Funkeln
             //Mach eine Recherche wie man spezifische stellen in der Konsole aktualisiert.
 
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             int hoehe = 12;
             int stammHoehe = 4;
             int stammBreite = 3;
@@ -59,15 +60,15 @@
                         }
                         else if (i % 2 == 0)                                    // % für den Restoperator nutzen das abgeglichen wird od i/2 keinen restwert hat
                         {
-                            string test = (j % 2 == 0 ? "*" : "o");
-                            if (test == "o") Console.ForegroundColor = ConsoleColor.Red;
+                            string test = (j % 2 == 0 ? "*" : "•");
+                            if (test == "•") Console.ForegroundColor = ConsoleColor.Red;
                             Console.Write(test);              // ? als bool abgleich von * und o 
                             Console.ForegroundColor = ConsoleColor.White;
                         }
                         else
                         {
-                            string test2 = (j % 2 == 0 ? "+" : "*");
-                            if (test2 == "+") Console.ForegroundColor = ConsoleColor.DarkCyan;
+                            string test2 = (j % 2 == 0 ? "†" : "*");
+                            if (test2 == "†") Console.ForegroundColor = ConsoleColor.DarkCyan;
                             Console.Write(test2);
                             Console.ForegroundColor = ConsoleColor.White;
                         }
@@ -102,68 +103,68 @@
                 Thread.Sleep(3000);
 
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.BackgroundColor = ConsoleColor.Green;
-                Console.SetCursorPosition(10, 2); Console.Write("o");
-                Console.SetCursorPosition(12, 2); Console.Write("o");
-                Console.SetCursorPosition(8, 4); Console.Write("o");
-                Console.SetCursorPosition(10, 4); Console.Write("o");
-                Console.SetCursorPosition(12, 4); Console.Write("o");
-                Console.SetCursorPosition(14, 4); Console.Write("o");
-                Console.SetCursorPosition(6, 6); Console.Write("o");
-                Console.SetCursorPosition(8, 6); Console.Write("o");
-                Console.SetCursorPosition(10, 6); Console.Write("o");
-                Console.SetCursorPosition(12, 6); Console.Write("o");
-                Console.SetCursorPosition(14, 6); Console.Write("o");
-                Console.SetCursorPosition(16, 6); Console.Write("o");
-                Console.SetCursorPosition(4, 8); Console.Write("o");
-                Console.SetCursorPosition(6, 8); Console.Write("o");
-                Console.SetCursorPosition(8, 8); Console.Write("o");
-                Console.SetCursorPosition(10, 8); Console.Write("o");
-                Console.SetCursorPosition(12, 8); Console.Write("o");
-                Console.SetCursorPosition(14, 8); Console.Write("o");
-                Console.SetCursorPosition(16, 8); Console.Write("o");
-                Console.SetCursorPosition(18, 8); Console.Write("o");
-                Console.SetCursorPosition(2, 10); Console.Write("o");
-                Console.SetCursorPosition(4, 10); Console.Write("o");
-                Console.SetCursorPosition(6, 10); Console.Write("o");
-                Console.SetCursorPosition(8, 10); Console.Write("o");
-                Console.SetCursorPosition(10, 10); Console.Write("o");
-                Console.SetCursorPosition(12, 10); Console.Write("o");
-                Console.SetCursorPosition(14, 10); Console.Write("o");
-                Console.SetCursorPosition(16, 10); Console.Write("o");
-                Console.SetCursorPosition(18, 10); Console.Write("o");
-                Console.SetCursorPosition(20, 10); Console.Write("o");
+                Console.BackgroundColor = (ConsoleColor)color.Next(1, 16);
+                Console.SetCursorPosition(10, 2); Console.Write("•");
+                Console.SetCursorPosition(12, 2); Console.Write("•");
+                Console.SetCursorPosition(8, 4); Console.Write("•");
+                Console.SetCursorPosition(10, 4); Console.Write("•");
+                Console.SetCursorPosition(12, 4); Console.Write("•");
+                Console.SetCursorPosition(14, 4); Console.Write("•");
+                Console.SetCursorPosition(6, 6); Console.Write( "•");
+                Console.SetCursorPosition(8, 6); Console.Write("•");
+                Console.SetCursorPosition(10, 6); Console.Write("•");
+                Console.SetCursorPosition(12, 6); Console.Write("•");
+                Console.SetCursorPosition(14, 6); Console.Write("•");
+                Console.SetCursorPosition(16, 6); Console.Write("•");
+                Console.SetCursorPosition(4, 8); Console.Write("•");
+                Console.SetCursorPosition(6, 8); Console.Write("•");
+                Console.SetCursorPosition(8, 8); Console.Write("•");
+                Console.SetCursorPosition(10, 8); Console.Write("•");
+                Console.SetCursorPosition(12, 8); Console.Write("•");
+                Console.SetCursorPosition(14, 8); Console.Write("•");
+                Console.SetCursorPosition(16, 8); Console.Write("•");
+                Console.SetCursorPosition(18, 8); Console.Write("•");
+                Console.SetCursorPosition(2, 10); Console.Write("•");
+                Console.SetCursorPosition(4, 10); Console.Write("•");
+                Console.SetCursorPosition(6, 10); Console.Write("•");
+                Console.SetCursorPosition(8, 10); Console.Write("•");
+                Console.SetCursorPosition(10, 10); Console.Write("•");
+                Console.SetCursorPosition(12, 10); Console.Write("•");
+                Console.SetCursorPosition(14, 10); Console.Write("•");
+                Console.SetCursorPosition(16, 10); Console.Write("•");
+                Console.SetCursorPosition(18, 10); Console.Write("•");
+                Console.SetCursorPosition(20, 10); Console.Write("•");
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.SetCursorPosition(10, 1); Console.Write("+");
-                Console.SetCursorPosition(12, 1); Console.Write("+");
-                Console.SetCursorPosition(8, 3); Console.Write("+");
-                Console.SetCursorPosition(10, 3); Console.Write("+");
-                Console.SetCursorPosition(12, 3); Console.Write("+");
-                Console.SetCursorPosition(14, 3); Console.Write("+");
-                Console.SetCursorPosition(6, 5); Console.Write("+");
-                Console.SetCursorPosition(8, 5); Console.Write("+");
-                Console.SetCursorPosition(10, 5); Console.Write("+");
-                Console.SetCursorPosition(12, 5); Console.Write("+");
-                Console.SetCursorPosition(14, 5); Console.Write("+");
-                Console.SetCursorPosition(16, 5); Console.Write("+");
-                Console.SetCursorPosition(4, 7); Console.Write("+");
-                Console.SetCursorPosition(6, 7); Console.Write("+");
-                Console.SetCursorPosition(8, 7); Console.Write("+");
-                Console.SetCursorPosition(10, 7); Console.Write("+");
-                Console.SetCursorPosition(12, 7); Console.Write("+");
-                Console.SetCursorPosition(14, 7); Console.Write("+");
-                Console.SetCursorPosition(16, 7); Console.Write("+");
-                Console.SetCursorPosition(18, 7); Console.Write("+");
-                Console.SetCursorPosition(2, 9); Console.Write("+");
-                Console.SetCursorPosition(4, 9); Console.Write("+");
-                Console.SetCursorPosition(6, 9); Console.Write("+");
-                Console.SetCursorPosition(8, 9); Console.Write("+");
-                Console.SetCursorPosition(10, 9); Console.Write("+");
-                Console.SetCursorPosition(12, 9); Console.Write("+");
-                Console.SetCursorPosition(14, 9); Console.Write("+");
-                Console.SetCursorPosition(16, 9); Console.Write("+");
-                Console.SetCursorPosition(18, 9); Console.Write("+");
-                Console.SetCursorPosition(20, 9); Console.Write("+");
+                Console.SetCursorPosition(10, 1); Console.Write("†");
+                Console.SetCursorPosition(12, 1); Console.Write("†");
+                Console.SetCursorPosition(8, 3); Console.Write("†");
+                Console.SetCursorPosition(10, 3); Console.Write("†");
+                Console.SetCursorPosition(12, 3); Console.Write("†");
+                Console.SetCursorPosition(14, 3); Console.Write("†");
+                Console.SetCursorPosition(6, 5); Console.Write("†");
+                Console.SetCursorPosition(8, 5); Console.Write("†");
+                Console.SetCursorPosition(10, 5); Console.Write("†");
+                Console.SetCursorPosition(12, 5); Console.Write("†");
+                Console.SetCursorPosition(14, 5); Console.Write("†");
+                Console.SetCursorPosition(16, 5); Console.Write("†");
+                Console.SetCursorPosition(4, 7); Console.Write("†");
+                Console.SetCursorPosition(6, 7); Console.Write("†");
+                Console.SetCursorPosition(8, 7); Console.Write("†");
+                Console.SetCursorPosition(10, 7); Console.Write("†");
+                Console.SetCursorPosition(12, 7); Console.Write("†");
+                Console.SetCursorPosition(14, 7); Console.Write("†");
+                Console.SetCursorPosition(16, 7); Console.Write("†");
+                Console.SetCursorPosition(18, 7); Console.Write("†");
+                Console.SetCursorPosition(2, 9); Console.Write("†");
+                Console.SetCursorPosition(4, 9); Console.Write("†");
+                Console.SetCursorPosition(6, 9); Console.Write("†");
+                Console.SetCursorPosition(8, 9); Console.Write("†");
+                Console.SetCursorPosition(10, 9); Console.Write("†");
+                Console.SetCursorPosition(12, 9); Console.Write("†");
+                Console.SetCursorPosition(14, 9); Console.Write("†");
+                Console.SetCursorPosition(16, 9); Console.Write("†");
+                Console.SetCursorPosition(18, 9); Console.Write("†");
+                Console.SetCursorPosition(20, 9); Console.Write("†");
                 Console.BackgroundColor = ConsoleColor.Black;
                 string zufallsGruss2 = spruch[rnd.Next(spruch.Length)];
                 Random color2 = new Random();
